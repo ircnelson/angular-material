@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html class="no-js" lang="en" ng-app="app">
+    
+    <head>
+        <title>Angular Material Exemplo</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+            
+        <link rel="stylesheet" type="text/css" href="libs/angular-material/angular-material.css" />
+    </head>
+    
+    <body layout="row">
+        <div ui-view="leftNav"></div>
+        <div layout="column" flex>
+            <md-toolbar class="md-whiteframe-z2">
+                <hamburguer-menu side="left"></hamburguer-menu>
+            </md-toolbar>
+            <md-content md-scroll-y flex layout-padding ui-view="content"></md-content>
+        </div>
+        <div ui-view="rightNav"></div>
+            
+        <script src="libs/angular/angular.js"></script>
+        <script src="libs/angular-aria/angular-aria.js"></script>
+        <script src="libs/angular-animate/angular-animate.js"></script>
+        <script src="libs/angular-material/angular-material.js"></script>
+        <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/home/router.js"></script>
+        <script src="app/home/controllers/HomeCtrl.js"></script>
+        <script src="app/home/controllers/LeftCtrl.js"></script>
+        <script src="app/home/controllers/RightCtrl.js"></script>
+        <script src="app/directives/hamburguerMenu/HamburguerMenu.js"></script>
+    </body>
+
+</html>
